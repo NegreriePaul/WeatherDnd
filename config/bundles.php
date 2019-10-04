@@ -15,5 +15,5 @@ return [
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     Csa\Bundle\GuzzleBundle\CsaGuzzleBundle::class => ['all' => true],
-    App\DnD\WeatherBundle\DnDWeatherBundle::class => ['all' => true],
+    App\WeatherBundle\WeatherBundle::class => ['all' => true],
 ];
