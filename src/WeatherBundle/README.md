@@ -5,6 +5,10 @@ to install with composer :
 ```bash
 composer require dndtest/weather-bundle
 ```
+
+
+Add to config/bundles.php :
+
 ```bash
 <?php
 
