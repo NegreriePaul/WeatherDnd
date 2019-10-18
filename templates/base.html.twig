@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+<html lang="fr">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+<section id="content">
+{% block content %}
+
+{{ get_weather('Paris') }}
+{{ get_weather('Londres') }}
+{{ get_weather('Berlin') }}
+{{ get_weather('Washington') }}
+{{ get_weather('Buenos Aires') }}
+    
+{% endblock %}
+</section>
+<footer id="footer">
+    {% block footer %}
+    DnD Test.
+    {% endblock %}
+</footer>
+</body>
+</html>   
+
+       
+    
+
+
+
