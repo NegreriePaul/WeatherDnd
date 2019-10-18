@@ -1,0 +1,19 @@
+services:
+
+    # Doctrine ApcCache Service
+    weather.cache:
+        class: Doctrine\Common\Cache\ApcCache
+
+    # Guzzle Http Service
+    weather.service.httpclient.guzzle:
+        class: App\WeatherBundle\Service\HttpClient\GuzzleHttpClient
+
+    # OpenWeatherMap Service
+    weather.service.weather.open:
+        class: App\WeatherBundle\Service\WeatherService\MapWeatherService
+         
+    # Weather Twig Extension Service
+    weather.twig.weather:
+        class: App\WeatherBundle\Twig\WeatherExtension
+        tags:
+            - { name: twig.extension }
