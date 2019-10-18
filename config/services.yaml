@@ -23,5 +23,21 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+    # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    App\WeatherBundle\Controller\:
+        resource: '../src/WeatherBundle/Controller'
+        public: true
+        tags: ['controller.service_arguments']
+        calls:
+         - [setContainer, ["@service_container"]]
+
+         # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    App\WeatherBundle\Service\:
+        resource: '../src/WeatherBundle/Service'
+        public: true
+        
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
