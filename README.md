@@ -9,3 +9,10 @@ composer install
 ```
 
 To install the WeatherBundle in your own project, see the readme.md in the WeatherBundle.
+
+to start :
+
+```bash
+php bin/console server:run
+```
+
